@@ -6,12 +6,30 @@
     <body>
         <div>
             <div>
-                <img src="assests\images\logo.png" height="200" width="150" alt=logo>
+                <a href="index.html"><img src="assests\images\logo.png" height="200" width="150" alt=logo></a>
                 <a href="login.html" target="_blank">Login</a>
          </div>
          <div>
              <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"><br/>
-             <a href="payment.html" target="_blank">Book Now</a><br/><br/>
+             <form method="GET" action="payment.html">
+                 <label for="Adults">Adults:</label>
+                 <input type="number" min="1" id="Adults" name="Adults" required><br/>
+                 
+                 <label for="name">Name:</label>
+                 <input type="name" id="name" name="name" required><br/>
+                 
+                 <label for="from date">From Date:</label>
+                 <input type="date"  id="from date" name="from date" required><br/>
+                 
+                 <label for="to date">To Date:</label>
+                 <input type="date"  id="to date" name="to date" required><br/>
+                 
+                 <label for="total">Total:</label>
+                 <input type="number"  id="total" name="total" disabled><br/>
+                 
+                 <button>Book Now</button>
+             </form>
+
              <h3>Radisson Blu Hotel</h3>
              5 Star<br/><br/>
              AMENITIES<br/>
