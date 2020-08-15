@@ -2,15 +2,36 @@
 <html>
     <head>
         <title>Detail</title>
+        <style>
+            html,body{
+                height:100%;
+                width: 100%;
+            }
+            .container{
+                height: 100%;
+            }
+           #img1{
+               width:  60px;
+           }
+           #img2{
+               height: 500px ;
+               width:  500px;
+           }
+          
+           #img3{
+               height: 20x ;
+               width:  22px;
+           } 
+          </style>
     </head>
     <body>
         <div>
-            <div>
-                <a href="index.html"><img src="assests\images\logo.png" height="200" width="150" alt=logo></a>
+            <header>
+                <a href="index.html"><img id="img1" src="assests\images\logo.png" alt=logo></a>
                 <a href="login.html" target="_blank">Login</a>
-         </div>
+         </header>
          <div>
-             <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"><br/>
+             <img id="img2" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"><br/>
              <form method="GET" action="payment.html">
                  <label for="Adults">Adults:</label>
                  <input type="number" min="1" id="Adults" name="Adults" required><br/>
@@ -31,8 +52,9 @@
              </form>
 
              <h3>Radisson Blu Hotel</h3>
-             5 Star<br/><br/>
-             AMENITIES<br/>
+             <span>5 Star<br/><br/></span>
+             <span> AMENITIES<br/></span>
+
              <ul>
                  <li>Room Service</li>
                  <li>Restarunant</li>
@@ -45,13 +67,14 @@
              doloribus architecto!
              </p>
          </div>
-         <div>
+
+         <footer>
              <a href="contact.html" target="_blank">Contact Us</a><br/>
-             <a href ="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" height="20px" width="22px"></a>_
-             <a href ="https://www.instagram.com" taget="_blank"><img src="assests/images/instagram.png" height="20px" width="22px"></a>_
-             <a href ="https://www.twitter.com" target="_blank"><img src="assests/images/twitter.png" height="20px" width="22px"></a><br/>
+             <a href ="https://www.facebook.com" target="_blank"><img id="img3" src="assests/images/facebook.png"></a>_
+             <a href ="https://www.instagram.com" taget="_blank"><img id="img3" src="assests/images/instagram.png" ></a>_
+             <a href ="https://www.twitter.com" target="_blank"><img id="img3" src="assests/images/twitter.png"></a><br/>
              &#169; ROOM SEARCH PVT.LTD.
-         </div>
+         </footer>
       </div>
     </body>
 </html>
