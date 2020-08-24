@@ -1,0 +1,30 @@
+
+#img2{
+    height: 150px ;
+    width:  150px;
+}
+.rounded-corners{
+    border-radius: 25%;
+}
+.image{
+    height : 380px;
+    background-image:url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.margin{
+    margin:2%;
+}
+input{
+    
+    margin-left:500px;
+    margin-top:175px;
+    background-color:#f1f1f1;
+    border:1px solid rgba(0,0,0,0);
+    border-radius:12px;
+    font-size:16px;
+    padding:10px;
+    width:400px;
+    
+}

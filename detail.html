@@ -2,42 +2,25 @@
 <html>
     <head>
         <title>Detail</title>
-        <style>
-            html,body{
-                height:100%;
-                width: 100%;
-            }
-            .container{
-                height: 100%;
-            }
-           #img1{
-               width:  60px;
-           }
-           #img2{
-               height: 500px ;
-               width:  500px;
-           }
-          
-           #img3{
-               height: 20x ;
-               width:  22px;
-           } 
-           .margin{
-               margin-top:2%;
-               margin-left:4%;
-               margin-right:4%;
-           }
-          </style>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="styles\common.css" rel="stylesheet">
+        <link href="styles\detail.css" rel="stylesheet">
     </head>
-    <body style="background-color: #e0e0e0;">
+    <body>
         <div>
-            <header style="background-color:rosybrown">
-                <a href="index.html"><img id="img1" src="assests\images\logo.png" alt=logo></a>
-                <a href="login.html" target="_blank">Login</a>
+            <header class="headerFixed ">
+                <div class="view2">
+                     <div>
+                        <a href="index.html"><img id="img1" class="align"  src="assests\images\logo.png"  alt=logo></a>
+                    </div>
+                    <div style="padding-top: 20px;padding-right: 10px;">
+                        <a id="link" class="font" href="login.html" target="_blank">Login</a>
+                    </div>
+                </div>
            </header>
            <div class="margin">
              <img id="img2" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"><br/>
-             <form method="GET" action="payment.html">
+             <form method="GET" action="payment.html" class="font">
                  <label for="Adults">Adults:</label>
                  <input type="number" min="1" id="Adults" name="Adults" required><br/>
                  
@@ -56,30 +39,35 @@
                  <button>Book Now</button>
              </form>
 
-             <h3>Radisson Blu Hotel</h3>
-             <span>5 Star<br/><br/></span>
-             <span> AMENITIES<br/></span>
+             <h3 class="font">Radisson Blu Hotel</h3>
+             <span class="font">5 Star<br/><br/></span>
+             <span class="font"> AMENITIES<br/></span>
 
-             <ul>
+             <ul class="font">
                  <li>Room Service</li>
                  <li>Restarunant</li>
                  <li>Business Center</li>
                  <li>Fitness Center</li>
                  <li>Pool</li>
              </ul>
-             DISCREPTION<br/>
-             <p>Lorem ipsum dolor sit amet consectetur adipissicing elit Deleniti, illum totam magni voluptatibus libero delctus nesciunt hic vell Aperism esse asperiores culpa , natus quam eum ex doloremque
+             <span class="font" >DISCREPTION</span>
+             <p class="font">Lorem ipsum dolor sit amet consectetur adipissicing elit Deleniti, illum totam magni voluptatibus libero delctus nesciunt hic vell Aperism esse asperiores culpa , natus quam eum ex doloremque
              doloribus architecto!
              </p>
          </div>
-
-         <footer style="background-color:rosybrown">
-             <a href="contact.html" target="_blank">Contact Us</a><br/>
-             <a href ="https://www.facebook.com" target="_blank"><img id="img3" src="assests/images/facebook.png"></a>_
-             <a href ="https://www.instagram.com" taget="_blank"><img id="img3" src="assests/images/instagram.png" ></a>_
-             <a href ="https://www.twitter.com" target="_blank"><img id="img3" src="assests/images/twitter.png"></a><br/>
-             &#169; ROOM SEARCH PVT.LTD.
-         </footer>
+         <footer class="footerFixed">
+            <div class="view2" style="padding-top: 20px;padding-left:10px">
+               <div>
+                    <a id="link" class="font" href="contact.html">Contact Us</a>
+               </div>
+               <div class="font"> 
+                   <a id="link"  href ="https://www.facebook.com" target="_blank"><img    id="img3" src="assests/images/facebook.png"></a>
+                   <a id="link"  href ="https://www.instagram.com" taget="_blank"><img   id="img3" src="assests/images/instagram.png"></a> 
+                   <a id="link"  href ="https://www.twitter.com" target="_blank"><img class="align"  id="img3"src="assests/images/twitter.png"></a>
+               </div> 
+           </div>
+             <p class="font size text" >&#169;2020 ROOM SEARCH PVT.LTD.</p> 
+     </footer>
       </div>
     </body>
 </html>

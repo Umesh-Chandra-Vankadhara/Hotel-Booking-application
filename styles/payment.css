@@ -1,0 +1,16 @@
+
+#img2{
+   height: 500px ;
+   width:  500px;
+}
+.margin{
+  margin: 0 auto;
+  margin-top:2%;
+  margin-bottom:2%;
+}
+.background{
+   background-color: rgb(132,136,139) ;
+}
+strong{
+   margin:2%0%2%2%;
+}

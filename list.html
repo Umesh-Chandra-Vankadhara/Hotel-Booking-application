@@ -2,63 +2,57 @@
 <html>
     <head>
         <title>List</title>
-        <style>
-            html,body{
-                height:100%;
-                width: 100%;
-            }
-            .container{
-                height: 100%;
-                
-            }
-           #img1{
-               width:  60px;
-           }
-           #img2{
-               height: 200px ;
-               width:  250px;
-           }
-           #img3{
-               height: 20x ;
-               width:  22px;
-           } 
-           .margin{
-               margin:2%;
-           }
-           .background{
-               background-color: rgb(132,136,139) ;
-           }
-          </style>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="styles\common.css" rel="stylesheet">
+        <link href="styles\list.css" rel="stylesheet">
+
     </head>
-    <body style="background-color: #e0e0e0;">
+    <body >
         <div class="container">
-           
-            <header style="background-color:rosybrown">
-                 <a  href="index.html"><img id="img1" src="assests\images\logo.png"  alt=logo></a>
-                 <a href="login.html" target="_blank">Login</a>
-            </header>
-           
+            <header class="headerFixed ">
+                <div class="view2">
+                     <div>
+                         <a href="index.html"><img id="img1" class="align"  src="assests\images\logo.png"  alt=logo></a>
+                    </div>
+                    <div style="padding-top: 20px;padding-right: 10px;">
+                        <a id="link" class="font" href="login.html" target="_blank">Login</a>
+                    </div>
+                </div>
+           </header>
             <div>
-                 <ul>
-                     <li><a href="#img2">List View</a></li>
-                     <li><a href="#mapView">Map View</a></li>
-                 </ul>
+                <div class="view" >
+                   
+                    <div style="padding: 20px;">
+                         <strong><a id="link" class="font" href="#img2">List View</a></strong>
+                    </div>
+
+                    <div style="padding: 20px;">
+                         <strong><a id="link" class="font" href="#mapView">Map View</a></strong>
+                    </div>
+
+        
+                </div>
+
+                <div class="view1">
+        
                  <div class="background margin " style="width:40%">
-                     <a href="detail.html">
+                     <a id="link" href="detail.html">
                      <img id="img2"  src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg">
                      <h3 >Radisson Blu Hotel</h3>
                      <p> 5 Star<br/></p>
                      <p> New Delhi</a></p>
                 </div>
                   
-                <div class="background margin " style="width:40%">
+                <div class="background margin " style="width:40%;margin-left: 4%;">
                      <img id="img2" src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg">
                      <h3>The Lalit New Delhi</h3>
                      <p>4.5 Star<br/></p>
                      <p>New Delhi</p> 
                 </div>
 
-            
+             </div>
+
+            <div class="view1">
                 <div class="background margin " style="width:40%">
                      <img id="img2" src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg">
                      <h3>Taj Palace</h3>
@@ -66,17 +60,26 @@
                      <p>New Delhi</p> 
                 </div>
              </div>
+            </div>
+
+            <div style="display: none;">
         
                  <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png"><br/>
                  <span id="mapView">MAP VIEW<br/><br/></span>
-                 
-                 <footer style="background-color:rosybrown">
-                     <a href="contact.html" target="_blank">Contact Us</a><br/>
-                     <a href ="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" height="20px" width="22px"></a>_
-                     <a href ="https://www.instagram.com" taget="_blank"><img src="assests/images/instagram.png" height="20px" width="22px"></a>_
-                     <a href ="https://www.twitter.com" target="_blank"><img src="assests/images/twitter.png" height="20px" width="22px"></a><br/>
-                     &#169; ROOM SEARCH PVT.LTD.
-                 </footer>
+           </div>
+          <footer class="footerFixed">
+               <div class="view2" style="padding-top: 20px;padding-left:10px">
+                 <div>
+                      <a id="link" class="font" href="contact.html">Contact Us</a>
+                 </div>
+                 <div class="font"> 
+                     <a id="link"  href ="https://www.facebook.com" target="_blank"><img    id="img3" src="assests/images/facebook.png"></a>
+                     <a id="link"  href ="https://www.instagram.com" taget="_blank"><img   id="img3" src="assests/images/instagram.png"></a> 
+                     <a id="link"  href ="https://www.twitter.com" target="_blank"><img class="align"  id="img3"src="assests/images/twitter.png"></a>
+                 </div> 
+             </div>
+                 <p class="font size text" >&#169;2020 ROOM SEARCH PVT.LTD.</p> 
+         </footer>
      </div>
-    </body>
+ </body>
 </html>
