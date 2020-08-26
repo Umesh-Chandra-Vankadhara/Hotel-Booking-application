@@ -7,7 +7,7 @@
     margin:2%;
 }
 .background{
-    background-color: rgb(132,136,139) ;
+    background-color: lightgray ;
 }
 .view{
    display: flex;
@@ -18,9 +18,9 @@
    display: flex;
    flex-direction: row;
    justify-content: start;
-}
-/* .view2{
-   display: flex;
-   flex-direction: row;
    justify-content: space-between;
-} */
+}
+.view5{
+    display:flex;
+    flex-direction: row;
+}

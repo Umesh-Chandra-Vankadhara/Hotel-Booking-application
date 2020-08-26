@@ -23,15 +23,12 @@ html,body{
 .footerFixed {
     position: sticky;
     bottom: 0;
-    right: 0;
-    width:100%;
+    
     background-color:rosybrown;
 }
 .headerFixed{
     position: sticky;
     top :0;
-    left:0;
-    width:100%;
     background-color:rosybrown;
 }
 .font{
@@ -50,4 +47,8 @@ html,body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items:center;
+}
+.pad{
+    padding:1%;
 }
