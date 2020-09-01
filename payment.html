@@ -2,23 +2,21 @@
 <html>
     <head>
         <title>Payment</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-        <link href="styles\common.css" rel="stylesheet">
-        <link href="styles\payment.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="styles/payment.css">
+        <link rel="stylesheet" href="styles/common.css">
     </head>
     <body>
         <div>
-            <header class="headerFixed ">
-                <div class="view2">
-                     <div style="margin-left: 1%;">
-                        <a href="index.html"><img id="img1" class="align"  src="assests\images\logo.png"  alt=logo></a>
-                    </div>
-                    <div style="margin-right:2%">
-                        <a id="link" class="font" href="login.html" target="_blank">Login</a>
-                    </div>
-                </div>
-           </header>
-           <div class="background  view8" style="width:50%;margin-left: 25%;margin-top: 5%;">
+            <header class="headerFixed" id="headernav"></header>
+
+           <div class="modal fade" id="loginModal"></div>
+
+            <div class="background  view8" style="width:50%;margin-left: 25%;margin-top: 5%;">
             <div>
                 <img id="img2" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg">
             </div>
@@ -42,25 +40,16 @@
              <p><strong class="font1">Total Amount:</strong>Rs.10000</p> 
            </div>
              <div class="font">
-              <p><a id="link" class="font" href="#">Pay Now</a></p>
+              <!-- <p><a id="link" class="font" href="#">Pay Now</a></p> -->
+              <button type="button" class="btn btn-success">Pay Now</button>
             </div>
             </div>
             </div>
-            <footer class="footerFixed pad">
-                <div class="view2">
-                    <div style="margin-left: 2%;padding-left: 0%;">
-                            <a id="link" class="font" href="contact.html">Contact Us</a>
-                    </div>
-                    <div class="font size text padding">
-                        &#169;2020 ROOM SEARCH PVT.LTD.
-                    </div>
-                    <div class="font">  
-                        <a id="link"  href ="https://www.facebook.com" target="_blank"><img id="img3" src="assests/images/facebook.png"></a>
-                        <a id="link"  href ="https://www.instagram.com" taget="_blank"><img id="img3" src="assests/images/instagram.png"></a> 
-                        <a id="link"  href ="https://www.twitter.com" target="_blank"><img  id="img3"src="assests/images/twitter.png"></a>
-                    </div> 
-             </div>
-         </footer>
+            <footer class="footerFixed pad " id="footernav"></footer>
+         
+            <div class="modal fade" id="contactmodal"></div>
     </div>
+    <script src="scripts\common.js"></script> 
+    <script src="scripts\index.js"></script>
 </body>
 </html>

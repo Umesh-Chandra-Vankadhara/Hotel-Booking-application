@@ -2,64 +2,65 @@
 <html>
     <head>
         <title>Detail</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-        <link href="styles\common.css" rel="stylesheet">
         <link href="styles\detail.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link href="styles\common.css" rel="stylesheet">
     </head>
     <body>
         <div>
-            <header class="headerFixed ">
-                <div class="view2">
-                     <div style="margin-left: 1%;">
-                        <a href="index.html"><img id="img1" class="align"  src="assests\images\logo.png"  alt=logo></a>
-                    </div>
-                    <div style="margin-right:2%">
-                        <a id="link" class="font" href="login.html" target="_blank">Login</a>
-                    </div>
-                </div>
-           </header>
-           <!-- <div class="margin">
-             <img id="img2" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"><br/>
-             <form method="GET" action="payment.html" class="font">
-                 <label for="Adults">Adults:</label>
-                 <input type="number" min="1" id="Adults" name="Adults" required><br/>
-                 
-                 <label for="name">Name:</label>
-                 <input type="name" id="name" name="name" required><br/>
-                 
-                 <label for="from date">From Date:</label>
-                 <input type="date"  id="from date" name="from date" required><br/>
-                 
-                 <label for="to date">To Date:</label>
-                 <input type="date"  id="to date" name="to date" required><br/>
-                 
-                 <label for="total">Total:</label>
-                 <input type="number"  id="total" name="total" disabled><br/>
-                 *
-                 <button>Book Now</button>
-             </form> -->
-             <div class="margin view6" style="height:400px;border:1px solid black">
+            <header class="headerFixed" id="headernav"></header>
+
+            <div class="modal fade" id="loginModal"></div>
+
+            <!-- <div class="col-sm-4"> -->
+             <div class="margin view6" style="height:450px;border:1px solid black">
                  <div style="width:70%">
-                     <img style="height:350px;padding:3% 25%"  id="img2" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"><br/>
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+                     <div class="carousel-inner" >
+                          <div class="carousel-item active" style="width:50%;left:23%;margin-top:5%;"> 
+                             <img class="d-block w-100" style="height:350px;left:10% ;"  src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="First slide">
+                          </div>
+                          <div class="carousel-item" style="width:50%;left:23%;margin-top:5%;">
+                             <img class="d-block w-100" style="height:350px;"  src="https://media-cdn.tripadvisor.com/media/photo-o/01/fa/51/70/r-the-spa.jpg" alt="Second slide">
+                          </div>
+                          <div class="carousel-item" style="width:50%;left:23%;margin-top:5%;">
+                             <img class="d-block w-100" style="height:350px;" src="https://media-cdn.tripadvisor.com/media/photo-w/0e/b2/64/3f/radisson-blu-plaza-delhi.jpg" alt="Third slide">
+                          </div>
+                     </div>
+                       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                         <span class="sr-only"  style="color:rosybrown">Previous</span>
+                       </a>
+                        <a class="carousel-control-next"  href="#carouselExampleControls" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only"  style="color:rosybrown">Next</span>
+                        </a>
+                      </div>
+                     <!-- <img style="height:350px;margin-left: 22%;margin-top: 5%;"  id="img2" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"><br/> -->
                  </div>
                  <div style="width:30%;border-left:1px solid black;"> 
-                     <form method="GET" action="payment.html" class="font">
+                     <form method="post" action="payment.html" class="font">
                             <label for="Adults">Adults:</label>
                             <input type="number" min="1" id="Adults" name="Adults" required>
                              
                             <label for="name">Name:</label>
                             <input type="name" id="name" name="name" required>
                              
-                            <label for="from date">From Date:</label>
-                            <input type="date"  id="from date" name="from date" required>
+                            <label for="fromDate">From Date:</label>
+                            <input type="date"  id="fromDate" name="from date" required>
                              
                             <label for="to date">To Date:</label>
-                            <input type="date"  id="to date" name="to date" required>
+                            <input type="date"  id="toDate" name="to date" required>
                              
                             <label for="total">Total:</label>
-                            <input type="number"  id="total" name="total" disabled>
+                            <input type="text"  id="total" name="total" onclick="billing()">
                              
-                            <button>Book Now</button>
+                           <button type="button" id="bookbtn" class="btn btn-outline-success">Book Now</button>
 
                      </form>
                 </div>
@@ -67,8 +68,13 @@
    
              <div class="margin">
                     <h3 class="font">Radisson Blu Hotel</h3>
-                    <span class="font1"><strong>Rating</strong><br/><br/></span>
-                    <span class="font">5 Star<br/><br/></span>
+                    <span class="font1"><strong>Rating</strong><br/></span>
+                    <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><br/>
+                    
                     <span class="font1"><strong> AMENITIES</strong><br/></span>
 
                     <ul class="font">
@@ -84,21 +90,10 @@
                     </p>
             </div>
          </div>
-         <footer class="footerFixed pad">
-            <div class="view2">
-                <div style="margin-left: 2%;padding-left: 0%;">
-                        <a id="link" class="font" href="contact.html">Contact Us</a>
-                </div>
-                <div class="font size text padding">
-                    &#169;2020 ROOM SEARCH PVT.LTD.
-                </div>
-                <div class="font">  
-                    <a id="link"  href ="https://www.facebook.com" target="_blank"><img id="img3" src="assests/images/facebook.png"></a>
-                    <a id="link"  href ="https://www.instagram.com" taget="_blank"><img id="img3" src="assests/images/instagram.png"></a> 
-                    <a id="link"  href ="https://www.twitter.com" target="_blank"><img  id="img3"src="assests/images/twitter.png"></a>
-                </div> 
-         </div>
-     </footer>
-      </div>
+         <footer class="footerFixed pad " id="footernav"></footer>
+         <div class="modal fade" id="contactmodal"></div></div>
+      <script src="scripts\common.js"></script> 
+      <!-- <script src="scripts\index.js"></script> -->
+      <script src="scripts\detail.js"></script>
     </body>
 </html>
