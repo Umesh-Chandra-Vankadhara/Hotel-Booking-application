@@ -44,24 +44,26 @@
                      <!-- <img style="height:350px;margin-left: 22%;margin-top: 5%;"  id="img2" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"><br/> -->
                  </div>
                  <div style="width:30%;border-left:1px solid black;"> 
-                     <form method="post" action="payment.html" class="font">
-                            <label for="Adults">Adults:</label>
-                            <input type="number" min="1" id="Adults" name="Adults" required>
+                     <form action="payment.html" method="get" autocomplete="off" class="font">
+                            <label for="adult">Adults:</label>
+                            <input type="number" min="1" id="adult" name="adult"value="1" min="1" required>
                              
                             <label for="name">Name:</label>
                             <input type="name" id="name" name="name" required>
                              
                             <label for="fromDate">From Date:</label>
-                            <input type="date"  id="fromDate" name="from date" required>
+                            <input type="date"  id="fromDate" name="from date" oninput="updatePrice()" required>
                              
                             <label for="to date">To Date:</label>
-                            <input type="date"  id="toDate" name="to date" required>
+                            <input type="date"  id="toDate" name="to date"  oninput="updatePrice()" required>
                              
                             <label for="total">Total:</label>
-                            <input type="text"  id="total" name="total" onclick="billing()">
-                             
-                           <button type="button" id="bookbtn" class="btn btn-outline-success">Book Now</button>
-
+                            <!-- <input type="text"  id="total" name="total"> -->
+                            <input  type="text" name="price" id="price" readonly/>
+                            <input  type="hidden" id="id" name="id">
+                          <!-- <a href="payment.html"> -->
+                           <button type="submit" id="bookbtn" class="btn btn-outline-success" value="Book Now">Book Now</button>
+                          <!-- </a> -->
                      </form>
                 </div>
              </div>

@@ -49,7 +49,7 @@ let loginModal = `<div class="modal-dialog">
 
 
             <div class="modal-body" id="login-body">
-                <form action="#" class="login" id="loginform"> 
+                <form action="#" class="login" id="loginform" autocomplete="off"> 
                     <label for="username" style="margin-top: 30px;">Username:</label>
                     <input type="text" id="user" name="username" placeholder="Username" style="margin-left: 50px;"><br>
                     <label for="Password" style="margin-top: 30px;">Password:</label>

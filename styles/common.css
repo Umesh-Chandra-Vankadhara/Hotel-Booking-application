@@ -31,10 +31,10 @@ html,body{
     background-color:rosybrown;
 }
 .headerFixed{
+  
     position: sticky;
     top :0;
     right:0;
-
     background-color:rosybrown;
 }
 .font{
