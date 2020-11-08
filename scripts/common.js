@@ -11,7 +11,7 @@ let headerTemplate=` <div class="view2">
                 </div>
                 <div style="margin-right:2%">
                     <!-- <a id="link" class="font" href="login.html" target="_blank">Login</a> -->
-                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#loginModal" id="login-in-button">
+                    <button class="btn btn-light" data-toggle="modal" data-target="#loginModal" id="login" onclick="mainLogin(event)">
                         Login
                     </button>  
             </div>
@@ -59,7 +59,7 @@ let loginModal = `<div class="modal-dialog">
 
 
             <div class="modal-footer" id="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" id="loginbtn"  onclick=" userlogin()">Login</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="loginbtn"  onclick="login(event)">Login</button>
             </div>
 
         </div>
@@ -98,19 +98,66 @@ document.getElementById("contactmodal").innerHTML=contactTemplate;
 }
 
 
-function userlogin(){
-    let username=sessionStorage.setItem("username","admin");
-    let password=sessionStorage.setItem("password","admin");
-    //  document.getElementById("login-body").innerHTML=sessionStorage.getItem("user");
-    //  document.getElementById("login-body").innerHTML=sessionStorage.getItem("pass");
-    let user= sessionStorage.getItem("username");                                       //   document.getElementById("username");
-    let pass= sessionStorage.getItem("password");                                      //  document.getElementById("password");
 
-    if(user == 'admin' && pass == 'admin') {
-        // sessionStroage.isLogin=true;
-       alert("Successfully LogedIn...");
-       }
-    else{
-      // alert("Username or password invalid");
-       }
+/**
+ * Event handler invoked when login button inside the HEADER is clicked
+ * @param {*} e event
+ */
+let mainLogin = e => {
+	if (localStorage.getItem('isLogin') === 'true') {
+		localStorage.setItem('isLogin', 'false');
+		location.reload();
+	}
+};
+
+/**
+ * Event handler invoked when login button inside the LOGIN MODAL is clicked
+ * @param {*} e event
+ */
+let login = e => {
+	// setting both username and password to admin
+	localStorage.setItem('username', 'admin');
+	localStorage.setItem('password', 'admin');
+	// setting the user state as non logged on webpage load
+	localStorage.setItem('isLogin', 'false');
+
+	e.preventDefault();
+	let userElement = document.getElementById('user');
+	let passwordElement = document.getElementById('pass');
+
+	if (
+		userElement.value === localStorage.getItem('username') &&
+		passwordElement.value === localStorage.getItem('password')
+	) {
+		localStorage.setItem('isLogin', 'true');
+        alert('Successfully logged in!');
+        let loginElement = document.getElementById('login')
+        loginElement.dataset.target = '';
+        loginElement.innerText = 'Logout';
+        location.reload();
+	} else {
+		alert('Incorrect credentials! Login failed!');
+		// clearing values of username & password fields from login modal
+		userElement.value = '';
+		passwordElement.value = '';
+	}
+};
+
+let isLogin = localStorage.getItem('isLogin');
+let loginElement = document.getElementById('login');
+
+
+
+let checkLogin = () => {
+    if (!isLogin || isLogin === 'false') {
+        localStorage.clear();
+        loginElement.dataset.target = '#loginModal';
+        loginElement.innerText = 'Login';
+    } else if (isLogin === 'true') {
+        loginElement.dataset.target = '';
+        loginElement.innerText = 'Logout';
+    }
 }
+
+checkLogin();
+
